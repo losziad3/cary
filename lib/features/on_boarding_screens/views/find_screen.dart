@@ -1,7 +1,8 @@
 import 'package:cary/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/utils/colors.dart';
+import '../../../../core/utils/colors.dart';
 
 class FindScreen extends StatelessWidget {
   const FindScreen({super.key});
@@ -14,14 +15,14 @@ class FindScreen extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                "assets/auth_assets/Ellipse 1.png",
+                AppAssets.onBoardingBackGround,
               ),
               fit: BoxFit.fill),
         ),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(24.0),
+            const Padding(
+              padding: EdgeInsets.all(24.0),
               child: Align(
                   alignment: Alignment.topRight,
                   child: Text(
@@ -38,66 +39,66 @@ class FindScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         AppAssets.tire,
-                        height: 54,
-                        width: 74,
+                        height: 50.h,
+                        width: 70.w,
                       ),
                       SizedBox(
-                        width: 18,
+                        width: 16.w,
                       ),
                       Image.asset(
                         AppAssets.steeringWheel,
-                        height: 52,
-                        width: 54,
+                        height: 52.h,
+                        width: 54.w,
                       ),
                       SizedBox(
-                        width: 18,
+                        width: 18.w,
                       ),
                       Image.asset(
                         AppAssets.muffler,
-                        height: 45,
-                        width: 80,
+                        height: 45.h,
+                        width: 80.w,
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 14,
+                    height: 14.h,
                   ),
                   Image.asset(
                     AppAssets.car,
-                    height: 88,
-                    width: 202,
+                    height: 88.h,
+                    width: 202.w,
                   ),
                   SizedBox(
-                    height: 14,
+                    height: 14.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
                         AppAssets.speakers,
-                        height: 44,
-                        width: 78,
+                        height: 44.h,
+                        width: 78.w,
                       ),
                       SizedBox(
-                        width: 18,
+                        width: 18.w,
                       ),
                       Image.asset(
                         AppAssets.radio,
-                        height: 26,
-                        width: 81,
+                        height: 26.h,
+                        width: 81.w,
                       ),
                       SizedBox(
-                        width: 18,
+                        width: 18.w,
                       ),
                       Image.asset(
                         AppAssets.battery,
-                        height: 38,
-                        width: 58,
+                        height: 38.h,
+                        width: 58.w,
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 40.h,
                   ),
                   Text(
                     "Find",
@@ -109,20 +110,20 @@ class FindScreen extends StatelessWidget {
                   Text(
                       "Find spare parts for your car with ease, with the ability to deliver them to the location of your choice",
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 14.sp,
                         color: AppColors.darkBlue,
                         fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.center),
                   SizedBox(
-                    height: 40,
+                    height: 40.h,
                   ),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 46, vertical: 13),
                     decoration: BoxDecoration(
                         color: AppColors.darkBlue,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Text("Next"),
+                        borderRadius: BorderRadius.circular(15.r)),
+                    child: Text("Next",style: TextStyle(color: AppColors.white),),
                   )
                 ],
               ),
