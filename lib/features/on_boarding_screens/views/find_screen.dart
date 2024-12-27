@@ -100,7 +100,7 @@ class FindScreen extends StatelessWidget {
                   SizedBox(
                     height: 40.h,
                   ),
-                  Text(
+                const  Text(
                     "Find",
                     style: TextStyle(
                         fontSize: 32,

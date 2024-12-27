@@ -2,7 +2,7 @@ class AppAssets {
   ///Paths
   static const String path = "assets/";
   static const String authPath = "${path}auth_assets/";
-
+  static const String homePath = "${path}home_assets/";
   ///Assets
   static const String onBoardingBackGround = "${authPath}Ellipse 1.png";
   static const String car = "${authPath}Car.png";
@@ -12,4 +12,12 @@ class AppAssets {
   static const String steeringWheel = "${authPath}steering-wheel.png";
   static const String tire = "${authPath}Tire.png";
   static const String battery = "${authPath}Battery.png";
+
+  //HomeAssets
+  static const String camera = "${homePath}camera.png";
+  static const String logo = "${homePath}caryLogo.png";
+  static const String navigationIcon = "${homePath}nav.png";
+  static const String searchIcon = "${homePath}search.png";
+
+
 }
