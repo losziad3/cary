@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
@@ -9,14 +10,13 @@ import '../cart_screen.dart';
 import '../emergency_screen.dart';
 import '../home_screen.dart';
 import '../sell_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NavScreen extends StatelessWidget {
   const NavScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
 
     var cubit = HomeCubit.get(context);
     return BlocConsumer<HomeCubit,HomeStates>(
@@ -38,39 +38,39 @@ class NavScreen extends StatelessWidget {
              cubit.onChangePage(index);
              },
            navBarStyle: NavBarStyle.style6,
-          navBarHeight: height/14,
+          navBarHeight: 45.h,
            bottomScreenMargin: 20,
            controller: PersistentTabController(initialIndex:cubit.currentIndex),
            items: [
              PersistentBottomNavBarItem(
-                 icon:Icon(Icons.home_outlined),
+                 icon:Icon(CupertinoIcons.home),
                  title: 'Home',textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,),
-                 activeColorPrimary: Colors.blue.shade900.withOpacity(0.9),iconSize: width/13.5,
+                 activeColorPrimary: Colors.blue.shade900.withOpacity(0.9),iconSize:20.h,
 
              ),
              PersistentBottomNavBarItem(
                  icon: Icon(Icons.add_circle_outline_rounded),
                  title: 'Sell',textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,),
-               activeColorPrimary: Colors.blue.shade900.withOpacity(0.9),iconSize: width/13.5,
+               activeColorPrimary: Colors.blue.shade900.withOpacity(0.9),iconSize: 20.h,
              ),
              PersistentBottomNavBarItem(
-                 icon: Icon(Icons.warning_amber_outlined),iconSize: width/13,
+                 icon: Icon(Icons.warning_amber_rounded),iconSize: 22.h,
                  title: 'Emergency',textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,),
                  activeColorPrimary: Colors.blue.shade900),
              PersistentBottomNavBarItem(
-                 icon: Icon(Icons.shopping_cart_outlined),iconSize: width/13.5,
+                 icon: Icon(Icons.shopping_cart_outlined), iconSize: 20.h,
                  title: 'Cart',textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,),
                activeColorPrimary: Colors.blue.shade900.withOpacity(0.9),
 
              ),
              PersistentBottomNavBarItem(
-                 icon: Icon(Icons.person_3_outlined),iconSize: width/13.5,
+                 icon: Icon(CupertinoIcons.person),iconSize: 20.h,
                  title: 'Account',textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,),
                activeColorPrimary: Colors.blue.shade900.withOpacity(0.9),
 
              ),
            ],
-           padding:  EdgeInsets.only(top: height/150,bottom: height/250),
+           padding:  EdgeInsets.only(bottom:3.h,top: 4.h),
 
            animationSettings: const NavBarAnimationSettings(
              navBarItemAnimation: ItemAnimationSettings( // Navigation Bar's items animation properties.
