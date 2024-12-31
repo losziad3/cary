@@ -18,6 +18,9 @@ class AppAssets {
   static const String logo = "${homePath}caryLogo.png";
   static const String navigationIcon = "${homePath}nav.png";
   static const String searchIcon = "${homePath}search.png";
+  static const String carousal1 = "${homePath}carousal1.png";
+  static const String carousal2 = "${homePath}carousal2.png";
+  static const String carousal3 = "${homePath}carousal3.png";
 
 
 }

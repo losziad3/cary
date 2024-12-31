@@ -6,6 +6,8 @@ class HomeInitialStates extends HomeStates {}
 
 class OnChangeStates extends HomeStates {}
 
+class OnChangeIndicatorStates extends HomeStates {}
+
 class OnLoadingGetDataStates extends HomeStates {}
 
 class OnSuccessGetDataStates extends HomeStates {}

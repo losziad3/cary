@@ -14,6 +14,8 @@ class HomeCubit extends Cubit<HomeStates>{
   HomeCubit():super(HomeInitialStates());
   static HomeCubit get(context) => BlocProvider.of(context);
   int currentIndex= 0;
+  int activeIndex=0;
+
   List<Widget> navBar=const
   [
     HomeScreen(),
@@ -27,6 +29,11 @@ class HomeCubit extends Cubit<HomeStates>{
     currentIndex = index;
     emit(OnChangeStates());
   }
+  void onChangeIndex(index) {
+    activeIndex = index;
+    emit(OnChangeIndicatorStates());
+  }
+
 
 
 }
