@@ -21,6 +21,9 @@ class AppAssets {
   static const String carousal1 = "${homePath}carousal1.png";
   static const String carousal2 = "${homePath}carousal2.png";
   static const String carousal3 = "${homePath}carousal3.png";
+  static const String callAmbulance = "${homePath}call_ambulance.png";
+  static const String caRescue = "${homePath}car_rescue.png";
+  static const String reportAccident = "${homePath}report_accident.png";
 
 
 }
