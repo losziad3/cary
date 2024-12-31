@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart'; // Ensure this is imported for BlocProvider
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../cubits/home_cubit/home_screen_cubit.dart'; // Adjust import path
+import '../../../cubits/home_cubit/home_screen_cubit.dart';
 
 class ServiceWidget extends StatelessWidget {
   const ServiceWidget({super.key});
