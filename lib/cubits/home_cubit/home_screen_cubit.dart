@@ -1,5 +1,4 @@
 
-import 'package:cary/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/main_screens/account_screen.dart';

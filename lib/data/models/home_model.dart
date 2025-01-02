@@ -10,12 +10,6 @@ class HomeDataModel{
 
   ];
 
-  List carPart =[
-    AppAssets.tachometer,
-    AppAssets.crankshaft,
-    AppAssets.alternator,
-  ];
-
 }
 class ServiceModel {
   final String imagePath;
@@ -23,7 +17,6 @@ class ServiceModel {
 
   ServiceModel({required this.imagePath, required this.name});
 }
-
 
 List<ServiceModel> serviceModel = [
   ServiceModel(imagePath: AppAssets.caRescue, name: 'Car Rescue'),

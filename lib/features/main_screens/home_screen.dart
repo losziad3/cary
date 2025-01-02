@@ -1,5 +1,4 @@
 import 'package:cary/core/utils/assets.dart';
-import 'package:cary/data/models/home_model.dart';
 import 'package:cary/features/main_screens/home_widgets/carousal_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
