@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
     return  Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Padding(
           padding:  EdgeInsets.only(top: 32.h,left: 10.w,right: 10.w),
           child: Column(
@@ -73,15 +74,27 @@ class HomeScreen extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child:
                 Text(
-                  'Car Part',
+                  'Car Parts',
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18.h),
                 ),
               ),
-
+              SizedBox(
+                height: 8.h,
+              ),
+              const CarPartWidget(),
               SizedBox(height: 8.h,),
-              const CarPartWidget()
+              Container(
+                height: 100.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(15.r),bottom:Radius.circular(15.r) ),
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.sale),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

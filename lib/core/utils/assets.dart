@@ -27,6 +27,7 @@ class AppAssets {
   static const String crankshaft = "${homePath}crankshaft.png";
   static const String tachometer = "${homePath}tachometer.png";
   static const String alternator = "${homePath}alternator.png";
+  static const String sale = "${homePath}sale.png";
 
 
 }
