@@ -18,22 +18,27 @@ class CarousalWidget extends StatelessWidget {
       child: BlocBuilder<HomeCubit, HomeStates>(
         builder: (context, state) {
           final cubit = HomeCubit.get(context);
-
           return Stack(
-            alignment: Alignment.bottomCenter, // Align widgets at the bottom
+            alignment: Alignment.bottomCenter,
             children: [
               // Carousel Slider
               CarouselSlider.builder(
                 itemCount: homeDataModel.banner.length,
                 itemBuilder: (context, index, realIndex) {
-                  return Image.asset(
-                    homeDataModel.banner[index],
-                    width: 340.w,
-                    height: 167.h,
+                  return  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.vertical(top: Radius.circular(15.r),
+                          bottom:Radius.circular(15.r) ),
+                      image: DecorationImage(
+                        image: AssetImage(homeDataModel.banner[index],),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   );
+
                 },
                 options: CarouselOptions(
-                  height: 160.h,
+                  height: 140.h,
                   initialPage: 0,
                   enableInfiniteScroll: true,
                   autoPlay: true,
@@ -41,16 +46,15 @@ class CarousalWidget extends StatelessWidget {
                   autoPlayAnimationDuration: const Duration(seconds: 3),
                   autoPlayCurve: Curves.fastOutSlowIn,
                   scrollDirection: Axis.horizontal,
-                  viewportFraction: 1.h,
+                  viewportFraction: 0.8.h,
                   onPageChanged: (index, reason) {
-                    // Update the active index in cubit
                     cubit.onChangeIndex(index);
                   },
                 ),
               ),
               // Indicator
               Positioned(
-                bottom: 15.h, // Position it a little above the bottom
+                bottom: 4.h, // Position it a little above the bottom
                 child: AnimatedSmoothIndicator(
                   activeIndex: cubit.activeIndex, // Use activeIndex from cubit
                   count: homeDataModel.banner.length,

@@ -23,13 +23,7 @@ class HomeCubit extends Cubit<HomeStates>{
     CartScreen(),
     AccountScreen()
   ];
-  List serviceImg=
-  [
-    AppAssets.caRescue,
-    AppAssets.callAmbulance,
-    AppAssets.reportAccident,
 
-  ];
 
   void onChangePage(index) {
     currentIndex = index;
@@ -37,6 +31,7 @@ class HomeCubit extends Cubit<HomeStates>{
   }
   void onChangeIndex(index) {
     activeIndex = index;
+    emit(OnChangeIndicatorStates());
   }
 
 

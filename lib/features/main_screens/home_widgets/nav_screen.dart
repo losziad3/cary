@@ -46,7 +46,6 @@ class NavScreen extends StatelessWidget {
                  icon:Icon(CupertinoIcons.home),
                  title: 'Home',textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,),
                  activeColorPrimary: Colors.blue.shade900.withOpacity(0.9),iconSize:20.h,
-
              ),
              PersistentBottomNavBarItem(
                  icon: Icon(Icons.add_circle_outline_rounded),
@@ -67,11 +66,9 @@ class NavScreen extends StatelessWidget {
                  icon: Icon(CupertinoIcons.person),iconSize: 20.h,
                  title: 'Account',textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,),
                activeColorPrimary: Colors.blue.shade900.withOpacity(0.9),
-
              ),
            ],
            padding:  EdgeInsets.only(bottom:3.h,top: 4.h),
-
            animationSettings: const NavBarAnimationSettings(
              navBarItemAnimation: ItemAnimationSettings( // Navigation Bar's items animation properties.
                duration: Duration(milliseconds: 400),
@@ -83,13 +80,8 @@ class NavScreen extends StatelessWidget {
                screenTransitionAnimationType: ScreenTransitionAnimationType.slide,
              ),
            ),
-
-
-
          ),
-
         );
-
       },
     );
   }

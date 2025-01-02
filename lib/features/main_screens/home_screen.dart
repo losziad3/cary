@@ -1,8 +1,9 @@
 import 'package:cary/core/utils/assets.dart';
+import 'package:cary/data/models/home_model.dart';
 import 'package:cary/features/main_screens/home_widgets/carousal_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-
+import 'home_widgets/car_part_widget.dart';
 import 'home_widgets/service_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -63,10 +64,25 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                               fontSize: 18.h),
                         ),
-                        SizedBox(height: 10.h,),
-                      ],),]
+                        SizedBox(height: 4.h,),
+                      ],
+                    ),
+                  ]
               ),
-             const ServiceWidget(),
+               const ServiceWidget(),
+              Align(
+                alignment: Alignment.topLeft,
+                child:
+                Text(
+                  'Car Part',
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18.h),
+                ),
+              ),
+
+              SizedBox(height: 8.h,),
+              const CarPartWidget()
             ],
           ),
         ),

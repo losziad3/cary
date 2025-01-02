@@ -24,6 +24,9 @@ class AppAssets {
   static const String callAmbulance = "${homePath}call_ambulance.png";
   static const String caRescue = "${homePath}car_rescue.png";
   static const String reportAccident = "${homePath}report_accident.png";
+  static const String crankshaft = "${homePath}crankshaft.png";
+  static const String tachometer = "${homePath}tachometer.png";
+  static const String alternator = "${homePath}alternator.png";
 
 
 }
