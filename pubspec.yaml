@@ -74,6 +74,7 @@ flutter:
   assets:
     - assets/auth_assets/
     - assets/home_assets/
+    - assets/services_vectors/
 
   #   - images/a_dot_ham.jpeg
 
