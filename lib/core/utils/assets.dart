@@ -3,6 +3,7 @@ class AppAssets {
   static const String path = "assets/";
   static const String authPath = "${path}auth_assets/";
   static const String homePath = "${path}home_assets/";
+  static const String vectorPath = "${path}services_vectors/";
   ///Assets
   static const String onBoardingBackGround = "${authPath}Ellipse 1.png";
   static const String car = "${authPath}Car.png";
@@ -29,5 +30,9 @@ class AppAssets {
   static const String alternator = "${homePath}alternator.png";
   static const String sale = "${homePath}sale.png";
 
+  //ServicesVector
+  static const String caRescueVector = "${vectorPath}rescue_vector.png";
+  static const String ambulanceVector = "${vectorPath}ambulance_vector.png";
+  static const String reportAccidentVector = "${vectorPath}report_vector.png";
 
 }

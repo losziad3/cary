@@ -11,6 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
     bool isUpper = true,
     required VoidCallback onTap,
     required String text,
+    IconData? icon,
   }) =>
       Container(
         decoration: BoxDecoration(
@@ -19,13 +20,22 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
         height: height,
         child: MaterialButton(
           onPressed: onTap,
-          child: Text(
-            isUpper ? text.toUpperCase() : text,
-            style: TextStyle(
-              color: AppColors.white,
-              fontSize: textSize,
-              fontWeight: FontWeight.bold,
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon,color: Colors.white,),
+              SizedBox(width: 5.w,),
+              Text(
+                isUpper ? text.toUpperCase() : text,
+                style: TextStyle(
+                  color: AppColors.white,
+                  fontSize: textSize,
+                  fontWeight: FontWeight.bold,
+
+                ),
+              ),
+            ],
           ),
+
         ),
       );
