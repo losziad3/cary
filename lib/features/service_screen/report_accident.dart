@@ -1,7 +1,10 @@
+import 'package:cary/components/default_button_with_icon.dart';
+import 'package:cary/core/utils/routes.dart';
+import 'package:cary/features/main_screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../components/default_button.dart';
 import '../../core/utils/assets.dart';
 
 class ReportAccident extends StatelessWidget {
@@ -11,25 +14,18 @@ class ReportAccident extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 18.0,top: 25),
-          child: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.black),
-            onPressed: () {
+        leading: InkWell(
+            onTap: (){
+              context.pop();
             },
-          ),
-        ),
+            child: Icon(Icons.arrow_back_ios_new_outlined)),
         title: const Padding(
-          padding: EdgeInsets.only(top: 35.0),
+          padding: EdgeInsets.only(top: 10.0),
           child: Text(
             'Report Accident',
             style: TextStyle(color: Colors.black),
           ),
         ),
-        centerTitle: true,
-        toolbarHeight: 80,
       ),
       body:  Column(
 
@@ -56,7 +52,7 @@ class ReportAccident extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              defaultButton(
+              defaultButtonWithIcon(
                 width: 320.w,
                 onTap: () {},
                 text: 'Call 128',
