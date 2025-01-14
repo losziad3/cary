@@ -2,7 +2,7 @@ import 'package:cary/components/default_button.dart';
 import 'package:cary/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:go_router/go_router.dart';
 import '../../core/utils/colors.dart';
 
 class CarRescue extends StatelessWidget {
@@ -12,25 +12,18 @@ class CarRescue extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 18.0,top: 25),
-          child: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.black),
-            onPressed: () {
+        leading: InkWell(
+            onTap: (){
+              context.pop();
             },
-          ),
-        ),
+            child: Icon(Icons.arrow_back_ios_new_outlined)),
         title: const Padding(
-          padding: EdgeInsets.only(top: 35.0),
+          padding: EdgeInsets.only(top: 10.0),
           child: Text(
             'Car Rescue',
             style: TextStyle(color: Colors.black),
           ),
         ),
-        centerTitle: true,
-        toolbarHeight: 80,
       ),
       body: Padding(
         padding:  EdgeInsets.all(20.sp),
@@ -75,7 +68,7 @@ class CarRescue extends StatelessWidget {
             defaultButton(
                width: 185.w,
                 onTap: (){},
-                text: 'Next'
+                text: 'Next',
 
             ),
 

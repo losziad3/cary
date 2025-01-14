@@ -1,6 +1,9 @@
+import 'package:cary/core/utils/app_router.dart';
 import 'package:cary/core/utils/assets.dart';
+import 'package:cary/core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/utils/colors.dart';
 
@@ -21,13 +24,18 @@ class FindScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.all(24.0),
+            Padding(
+              padding: const EdgeInsets.all(24.0),
               child: Align(
                   alignment: Alignment.topRight,
-                  child: Text(
-                    "Skip",
-                    style: TextStyle(color: AppColors.darkBlue),
+                  child: InkWell(
+                    onTap: (){
+                      context.pushReplacement(RoutesName.mainScreen);
+                     },
+                    child:const Text(
+                      "Skip",
+                      style: TextStyle(color: AppColors.darkBlue),
+                    ),
                   )),
             ),
             Padding(
@@ -118,12 +126,22 @@ class FindScreen extends StatelessWidget {
                   SizedBox(
                     height: 40.h,
                   ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 46, vertical: 13),
-                    decoration: BoxDecoration(
-                        color: AppColors.darkBlue,
-                        borderRadius: BorderRadius.circular(15.r)),
-                    child: Text("Next",style: TextStyle(color: AppColors.white),),
+                  InkWell (
+                    onTap: (){
+                      context.pushReplacement(RoutesName.moveScreen);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 46, vertical: 13),
+                      decoration: BoxDecoration(
+                          color: AppColors.darkBlue,
+                          borderRadius: BorderRadius.circular(15.r)),
+                      child:
+                      Text(
+                        "Next",
+                        style: TextStyle(
+                            color: AppColors.white
+                        ),),
+                    ),
                   )
                 ],
               ),

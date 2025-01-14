@@ -2,7 +2,9 @@ import 'package:cary/core/utils/assets.dart';
 import 'package:cary/features/main_screens/home_widgets/carousal_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'home_widgets/car_part_widget.dart';
+import 'home_widgets/main_screen.dart';
 import 'home_widgets/service_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -52,7 +54,9 @@ class HomeScreen extends StatelessWidget {
                                 width: 25.w,
                                 height: 25.h,
                               ),
-                              onTap: (){},
+                              onTap: (){
+
+                              },
                             ),
                           ],
                         ),
